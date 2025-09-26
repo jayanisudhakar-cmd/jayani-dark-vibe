@@ -57,6 +57,23 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Portfolio specific colors
+        glow: "hsl(var(--glow))",
+        surface: "hsl(var(--surface))",
+        'surface-elevated': "hsl(var(--surface-elevated))",
+      },
+      fontFamily: {
+        'sans': ['Poppins', 'ui-sans-serif', 'system-ui'],
+      },
+      backgroundImage: {
+        'gradient-primary': 'var(--gradient-primary)',
+        'gradient-surface': 'var(--gradient-surface)',
+        'gradient-glow': 'var(--gradient-glow)',
+      },
+      boxShadow: {
+        'glow': 'var(--shadow-glow)',
+        'card': 'var(--shadow-card)',
+        'elevated': 'var(--shadow-elevated)',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,10 +97,41 @@ export default {
             height: "0",
           },
         },
+        "fade-in-up": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(30px)"
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)"
+          }
+        },
+        "slide-in-right": {
+          "0%": {
+            opacity: "0",
+            transform: "translateX(30px)"
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateX(0)"
+          }
+        },
+        "glow": {
+          "0%, 100%": {
+            textShadow: "0 0 20px hsl(var(--primary) / 0.5), 0 0 30px hsl(var(--primary) / 0.5)"
+          },
+          "50%": {
+            textShadow: "0 0 30px hsl(var(--primary) / 0.8), 0 0 40px hsl(var(--primary) / 0.8)"
+          }
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in-up": "fade-in-up 0.6s ease-out",
+        "slide-in-right": "slide-in-right 0.6s ease-out",
+        "glow": "glow 2s ease-in-out infinite alternate",
       },
     },
   },
